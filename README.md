@@ -1,1 +1,1 @@
-This is sample project for complete learning of different web development technologies.
+<b>This is sample project for complete learning of different web development technologies.</b>
