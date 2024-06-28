@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .work-box {
+      background-color: #3498db;
+      color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .completed-box {
+      background-color: #2ecc71;
+      color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .pending-box {
+      background-color: #9b59b6;
+      color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="work-box">
+          <h3>Work Allocated</h3>
+          <ul id="allocated-list">
+            <li>Task 1 <button class="btn btn-success btn-sm ml-2" onclick="completeTask(this)">Complete</button></li>
+            <li>Task 2 <button class="btn btn-success btn-sm ml-2" onclick="completeTask(this)">Complete</button></li>
+            <li>Task 3 <button class="btn btn-success btn-sm ml-2" onclick="completeTask(this)">Complete</button></li>
+            <!-- Add more tasks as needed -->
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="completed-box">
+          <h3>Completed Work</h3>
+          <ul id="completed-list">
+            <!-- Completed tasks will be moved here dynamically -->
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pending-box">
+          <h3>Pending Work</h3>
+          <ul id="pending-list">
+            <!-- Pending tasks will be moved here dynamically -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Your custom JavaScript -->
+  <script>
+    function completeTask(button) {
+      // Find the <li> containing the button
+      var taskItem = button.parentNode;
+
+      // Move the <li> to the appropriate list and update styling
+      var parentBox = taskItem.closest('.col-md-4');
+      if (parentBox.querySelector('.work-box')) {
+        // If the task is in Work Allocated
+        taskItem.removeChild(button); // Remove the complete button
+        taskItem.classList.add('list-group-item-success'); // Add completed styling
+        document.getElementById("completed-list").appendChild(taskItem); // Move to Completed Work
+      } else if (parentBox.querySelector('.pending-box')) {
+        // If the task is in Pending Work
+        taskItem.removeChild(button); // Remove the complete button
+        taskItem.classList.remove('list-group-item-danger'); // Remove pending styling
+        document.getElementById("completed-list").appendChild(taskItem); // Move to Completed Work
+      }
+    }
+  </script>
+</body>
+</html>
