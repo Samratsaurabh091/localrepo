@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .title-box {
+      background-color: #2e122a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .btn-big {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+    }
+    body{
+      background-color: rgb(88, 116, 83);
+    }
+  </style>
 </head>
 <body>
-    <style src="script.css"> This will add color</style>
-    <p> how to upload local directories on git hub using console</p>
-    <p> Now we are making changes with our new branch i.e. feature1 <div button="this is a button"></div></p>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="brand">
+          <!-- <img src="logo.jpg" alt="Logo" class="logo" width="60" alignment="left"> -->
+          <span class="brand-name">Directorate of Census Operations, Uttar Pradesh</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About Us</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Mission & Vision</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Employee Work Details</a>
+            <div class="dropdown-content">
+              <a href="#">Departments</a>
+              <a href="#">Projects</a>
+            </div>
+          </li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+   
+  <div class="container mt-5">
+    <div class="title-box">
+      <h1 class="display-4">DCC/DRS Officers Work Status</h1>
+    </div>
+    <div class="text-center mt-4">
+      <a href="officers.html" class="btn btn-alert btn-big">Click here to know work progress of every officer</a>
+    </div>
+  </div>
+  <!-- Bootstrap JS and dependencies (if needed) -->
 </body>
 </html>
