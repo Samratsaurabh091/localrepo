@@ -1,0 +1,15 @@
+<style>
+    .title-box {
+      background-color: #2e122a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .btn-big {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+    }
+    body{
+      background-color: rgb(88, 116, 83);
+    }
+  </style>
